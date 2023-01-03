@@ -1,0 +1,70 @@
+Problem Description
+-------------------
+TWO SUMS
+
+Given an array of integers nums and an integer target, return indices 
+of the two numbers such that they add up to target.
+
+Method of Solution
+------------------
+1) [1, 2, 3, 4, 6, 7] target = 11
+for i in range(len(arr)):
+  i = 0, first_elem = 1
+  for j in range(i+1, len(array)):
+   if array[i] + array[j] = target:
+    return [i, j]
+    else:
+    return []
+
+2) Dict approach [2,7,11,15] target = 17
+d = {} 
+// The key of the dict will be the values in the array 
+and the values of the dict will be the index of the element in the array
+
+for (idx,value) in enumerate(array):
+idx=0, j=2
+idx=1, j=7
+idx=2, j=11
+idx=3, j=15
+
+    rem = target - array[idx] // 17 - 15 = 2
+    if rem in d.keys():
+      return [d[rem], idx] => [0, 3]
+    else:
+      d[value] = idx
+      {2: 0, 10: 1, 11: 2}
+
+3) Two Sums - If the input array is sorted
+* We use a binary search method
+[2,7,11,15] target = 9 
+def two_sums(array, target):
+    for idx in range(len(array)):
+        array[0]
+        search_result = binary_search(array, target - array[idx])
+        return [idx, search_result]
+
+
+def binary_search(array, search_value):
+    hi = len(array) - 1
+    low = 0
+
+    while hi > low:
+        mid = hi+low // 2
+        
+        if search_value > array[mid]:
+            low = mid + 1
+        elif search_value < array[mid]:
+            hi = mid - 1
+    [1, 2, 3, 4, 7, 9, 11, 13, 15, 23, 25]
+    if array[hi] == search_value:
+        return hi
+    elif array[low] == search_value:
+        return low
+    else:
+        print("Target not found")
+        
+
+
+
+
+    

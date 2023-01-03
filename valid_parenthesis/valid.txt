@@ -1,0 +1,16 @@
+I am  alive
+s  = '{[]}'
+we create a list for open bracket ['(', '[', '{']
+we create a list for the close brackets [')', ']', '}']
+s_list = []
+for i in range(0, len(s)):
+ if s[i] in open_bracket:
+    idx = open_bracket.index(s[i])
+    s_list.append(idx)
+ elif s[i] in close_bracket
+    if (s_list[((len(s_list) - 1)] == close_bracket.index(s[i])) && len(s_list) > 0)
+      s_list.pop(s_list[len(s_list -1)])
+    elif (len(s_list) == 0) 
+        return true
+ else:
+    return false

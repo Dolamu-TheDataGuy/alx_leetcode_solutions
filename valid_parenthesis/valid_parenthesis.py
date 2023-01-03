@@ -16,7 +16,9 @@ def valid_paren(s):
             s_list.append(idx)
             print(s_list)
         elif s[i] in right_par:
-            if (s_list[-1] == right_par.index(s[i])) and (len(s_list) > 0):
+            if(len(s_list) == 0):
+                return False
+            if (s_list[-1] == right_par.index(s[i])) and (len(s_list) != 0):
                 s_list.pop()
                 print(s_list)
                 if (len(s_list) == 0):
@@ -25,4 +27,4 @@ def valid_paren(s):
                 return False
 
 if __name__ == "__main__":
-    print(valid_paren("{()}"))
+    print(valid_paren("(){}}{"))

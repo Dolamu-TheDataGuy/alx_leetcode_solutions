@@ -1,0 +1,9 @@
+profit = [] -> stack
+if prices is empty:
+  return 0
+for i in range(0, len(prices))
+  if prices[i] >= prices[i+1]:
+    continue
+  if prices[i] <= prices[i+1]:
+    profit.append(prices[i+1] - prices[i])
+    then go the the next one and subtract

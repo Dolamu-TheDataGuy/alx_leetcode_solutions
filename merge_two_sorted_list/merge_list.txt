@@ -1,0 +1,6 @@
+we get the head of both list
+while node.next != none:
+  if the element in list1 <= element in list2
+    the next of list1 points to element 2
+  else:
+    the next of list 2 points to element in 1

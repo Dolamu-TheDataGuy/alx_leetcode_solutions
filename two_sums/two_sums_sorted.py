@@ -1,28 +1,27 @@
 #!/usr/bin/python3
-def binary_search(array, search_value):
-    hi = len(array) - 1
-    low = 0
+# Binary Search in python
 
-    while low <= hi:
-        mid = hi+low // 2
-        if search_value > array[mid]:
+
+def binary_search(arr, search_value, start):
+    low = start
+    high = len(arr) - 1
+    while (low < high):
+        mid  = (low + high) // 2
+        if arr[mid] < search_value:
             low = mid + 1
-        elif search_value < array[mid]:
-            hi = mid - 1
         else:
-            return mid
-    if array[hi] == search_value:
-        return hi
-    elif array[low] == search_value:
+            high = mid
+    if (low ==  high and arr[low] == search_value):
         return low
     else:
-        print("Target not found")
+        return -1
+
 
 def two_sums(array, target):
     for idx in range(len(array)):
-        array[0]
-        search_result = binary_search(array, target - array[idx])
-        return [idx, search_result]
+        search_result = binary_search(array, target - array[idx], idx + 1)
+        if search_result != -1:
+            return [idx + 1, search_result + 1]
 
 if __name__ == "__main__":
-    print(two_sums([2,7,11,15], 9))
+    print(two_sums([2,7,11,15], 26))

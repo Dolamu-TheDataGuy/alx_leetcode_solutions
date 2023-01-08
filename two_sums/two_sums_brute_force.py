@@ -18,4 +18,4 @@ def two_sums(array, target):
             if array[i] + array[j] == target:
                 return [i, j]
             else:
-                return []
+                continue

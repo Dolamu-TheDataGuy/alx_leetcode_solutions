@@ -1,0 +1,26 @@
+# we are checking for only alphabets and numbers
+# 
+
+s = "raceacar"
+left = 0
+right = len(s) - 1
+
+while (left < right):
+  if s[left].lower() == s[right].lower():
+    left = left + 1
+    right = right - 1
+  else:
+    return False 
+
+
+def compare_func(str, first, last):
+  if str[first] == str[last]:
+    if (first == last) or (first = last + 1):
+      return True
+    else:
+      return compare_func(str, first + 1, last - 1)
+  else:
+    return False
+
+def verify_palidrome(str):
+  return compare_func(str, 0, (len(str) - 1))

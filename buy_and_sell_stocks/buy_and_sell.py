@@ -23,7 +23,9 @@ class Solution:
 
 
 price = [7,1,5,3,6,4]
-
+price_1 = [7,6,4,3,1]
 if __name__ == "__main__":
     clod = Solution()
     print(clod.maxProfit(price))
+    print(clod.maxProfit(price_1))
+    

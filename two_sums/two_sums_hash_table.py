@@ -13,9 +13,10 @@ def two_sums(array, target):
     """
     d = {}
     for (idx,value) in enumerate(array):
-        rem = target - array[idx]
+        rem = target - value
         if rem in d.keys():
             return [d[rem], idx]
         else:
             d[value] = idx
     
+print(two_sums([2,7,8,11,1,2], 9))
